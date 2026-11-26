@@ -21,8 +21,9 @@ O script instala sozinho:
   - cursor Yaru
   - tema das janelas
   - pastas amarelas Win11
-  - painel 60px / ícones 38px
+  - painel 60px / ícones 38px (mesma barra, sem os programas pessoais)
   - menu Iniciar
+  - Win+L trava a tela (como no Windows)
   - wallpaper
   - tela de login
 

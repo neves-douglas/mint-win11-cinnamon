@@ -37,13 +37,14 @@ Na primeira vez precisa de **internet**. O script instala sozinho o pacote `deep
 | Fonte Ubuntu 10 | `fonts-ubuntu` (já vem no Mint) |
 | Tema das janelas `Win11-round-Dark` | copiado para `~/.themes` |
 | Pastas amarelas Win11, lixeira, Explorer | overlay em `~/.local/share/icons` |
-| Painel 60px, ícones 38px | gsettings |
+| Painel (barra) 60px, ícones 38px, applets iguais | gsettings + config do Cinnamon |
 | Menu Iniciar (ícone Windows 38px) | config do Cinnamon + SVG incluso |
+| **Win+L** trava a tela (e Ctrl+Alt+L) | atalho do Cinnamon |
 | Sidebar do Nemo escura | `~/.config/gtk-3.0/gtk.css` |
 | Wallpaper Win11 dark | `~/Imagens/wallpapper/` |
 | Tela de login | slick-greeter (use `--no-greeter` se não quiser) |
 
-Não copia senha, Cursor nem lista pessoal de programas. A barra nasce com Nemo, Firefox, Chrome, Terminal e Configurações.
+A **barra** (tamanho, posição, menu, relógio, som, rede) vai igual. **Não** copia a lista de programas fixos (Chrome, Steam, Cursor…). A barra deles nasce com Nemo, Firefox, Chrome, Terminal e Configurações — cada um pinna o que usar.
 
 ```bash
 ./install.sh --douglas-pins   # mesma barra de apps da máquina original

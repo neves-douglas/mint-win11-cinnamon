@@ -198,7 +198,7 @@ cp -a "$ROOT/assets/wallpaper/windows-11-dark-mode-blue.jpg" \
   "$WALL_DIR/windows-11-dark-mode-blue.jpg"
 WALL_URI="file://$WALL_DIR/windows-11-dark-mode-blue.jpg"
 
-echo "==> 6/7  tamanhos (painel 60px, ícones 38px, menu, Nemo)"
+echo "==> 6/7  barra, menu, Nemo e Win+L (travar tela)"
 while IFS='|' read -r schema key value; do
   [[ -z "${schema:-}" || "$schema" =~ ^# ]] && continue
   gsettings set "$schema" "$key" "$value"
