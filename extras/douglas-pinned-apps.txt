@@ -1,0 +1,25 @@
+# Apps que o Douglas deixa fixos na barra (opcional).
+# Para usar: copie para o painel depois, ou ./install.sh --douglas-pins
+
+nemo.desktop
+google-chrome.desktop
+firefox.desktop
+brave-browser.desktop
+org.keepassxc.KeePassXC.desktop
+virt-manager.desktop
+com.obsproject.Studio.desktop:flatpak
+onlyoffice-desktopeditors.desktop
+discord.desktop
+4kyoutubetomp3.desktop
+4kvideodownloaderplus.desktop
+sweethome3d.desktop
+steam.desktop
+cursor.desktop
+antigravity-ide.desktop
+org.gnome.Calculator.desktop
+cinnamon-settings.desktop
+filezilla.desktop
+org.DolphinEmu.dolphin-emu.desktop:flatpak
+com.usebruno.Bruno.desktop:flatpak
+mysql-workbench.desktop
+org.gnome.Terminal.desktop

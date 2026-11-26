@@ -1,0 +1,3 @@
+https://github.com/yeyushengfan258/Win11-icon-theme
+src/places/scalable/folder.svg e folder-open.svg
+Pastas no estilo Fluent/Windows 11 (amarelo), overlay local em bloom/bloom-dark.

@@ -1,0 +1,3 @@
+https://github.com/yeyushengfan258/Win11-icon-theme
+src/places/scalable/user-trash.svg e user-trash-full.svg
+Lixeira da área de trabalho no estilo Recycle Bin do Windows 11 (vazia / cheia).

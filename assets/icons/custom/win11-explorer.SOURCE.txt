@@ -1,0 +1,3 @@
+https://github.com/yeyushengfan258/Win11-icon-theme
+src/apps/scalable/file-manager.svg
+Ícone do File Explorer da barra do Windows 11

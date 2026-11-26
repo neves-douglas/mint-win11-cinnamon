@@ -1,0 +1,93 @@
+/* Nemo: painel de navegação no estilo Windows 11 Explorer */
+.nemo-window .sidebar,
+.nemo-window .nemo-places-sidebar,
+.nemo-window .nemo-places-sidebar.frame,
+.nemo-window .sidebar .frame {
+  background-color: #202020;
+  color: #ffffff;
+  border: none;
+}
+
+.nemo-window .sidebar .view,
+.nemo-window .sidebar iconview,
+.nemo-window .sidebar row,
+.nemo-window .places-treeview {
+  background-color: #202020;
+  color: rgba(255, 255, 255, 0.92);
+  -GtkTreeView-vertical-separator: 10;
+  -gtk-icon-style: regular;
+}
+
+.nemo-window .sidebar image,
+.nemo-window .places-treeview image {
+  -gtk-icon-style: regular;
+}
+
+.nemo-window .places-treeview {
+  -NemoPlacesTreeView-disk-full-bg-color: rgba(255, 255, 255, 0.25);
+  -NemoPlacesTreeView-disk-full-fg-color: #60cdff;
+}
+
+.nemo-window .sidebar .view.cell:hover,
+.nemo-window .places-treeview .view.cell:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.nemo-window .sidebar .view.cell:selected,
+.nemo-window .sidebar .view:selected,
+.nemo-window .places-treeview .view.cell:selected {
+  background-color: #0078D4;
+  color: #ffffff;
+}
+
+.nemo-window .sidebar .view.expander {
+  color: rgba(255, 255, 255, 0.55);
+}
+.nemo-window .sidebar .view.expander:hover {
+  color: #ffffff;
+}
+
+/* Windows 11 window controls */
+headerbar button.titlebutton,
+.titlebar button.titlebutton,
+headerbar.default-decoration button.titlebutton,
+.titlebar.default-decoration button.titlebutton {
+  min-width: 46px;
+  min-height: 32px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background-image: none;
+  box-shadow: none;
+}
+
+headerbar button.titlebutton.close,
+.titlebar button.titlebutton.close {
+  background-image: none;
+  background-color: transparent;
+}
+
+headerbar button.titlebutton.close:hover,
+.titlebar button.titlebutton.close:hover,
+headerbar button.titlebutton.close:backdrop:hover,
+.titlebar button.titlebutton.close:backdrop:hover {
+  background-image: none;
+  background-color: #C42B1C;
+  color: #ffffff;
+}
+
+headerbar button.titlebutton.close:active,
+.titlebar button.titlebutton.close:active {
+  background-image: none;
+  background-color: #B11A10;
+  color: #ffffff;
+}
+
+headerbar button.titlebutton.minimize:hover,
+headerbar button.titlebutton.maximize:hover,
+.titlebar button.titlebutton.minimize:hover,
+.titlebar button.titlebutton.maximize:hover {
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0.06);
+}

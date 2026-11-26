@@ -1,0 +1,2 @@
+https://github.com/vinceliuice/Fluent-icon-theme
+src/16/places e src/16/devices — navegação do Explorer (Windows 11)
