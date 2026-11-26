@@ -1,0 +1,29 @@
+COMO INSTALAR (Linux Mint Cinnamon)
+===================================
+
+Jeito mais fácil
+----------------
+1. Abra a pasta mint-win11-cinnamon
+2. Clique duas vezes em "Instalar.desktop"
+3. Se o Mint perguntar, escolha "Executar no terminal"
+4. Digite a senha do computador (não aparece asterisco, é normal)
+5. Espere terminar
+6. Aperte Alt+F2, digite r, Enter
+
+Pelo terminal
+-------------
+  chmod +x install.sh
+  ./install.sh
+
+O script instala sozinho:
+  - ícones bloom (pacote deepin-icon-theme)
+  - Papirus
+  - cursor Yaru
+  - tema das janelas
+  - pastas amarelas Win11
+  - painel 60px / ícones 38px
+  - menu Iniciar
+  - wallpaper
+  - tela de login
+
+Precisa de internet na primeira vez (baixa o bloom, ~31 MB).

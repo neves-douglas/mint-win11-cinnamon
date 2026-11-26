@@ -1,37 +1,22 @@
 # mint-win11-cinnamon
 
-Visual **Windows 11** no **Linux Mint Cinnamon** (X11): tema escuro arredondado, pastas amarelas Fluent, menu estilo Iniciar, Nemo com sidebar escura e wallpaper stock do Win11.
+Visual **Windows 11** no **Linux Mint Cinnamon**. O instalador coloca **tudo**: ícones bloom, Papirus, cursor, tema, pastas, tamanhos do painel, menu, wallpaper e tela de login.
 
-Extraído da máquina do Douglas (Mint 22.3 / Cinnamon). Colegas: clonem e rodem o instalador.
+Feito para quem não manja de Linux — pede a senha uma vez e resolve o resto.
 
-## O que entra
+## Instalar
 
-- Tema GTK/Cinnamon/Metacity `Win11-round-Dark` (botões min/max/fechar no canto direito, fechar vermelho no hover)
-- Ícones `bloom` com overlay:
-  - pastas amarelas Win11 (incluindo Home e Área de trabalho)
-  - lixeira Win11
-  - Explorer na barra
-  - calculadora / terminal / configurações no estilo mac (os que estavam no desktop original)
-  - sidebar do Nemo mais viva (não-simbólica)
-- Painel inferior **60px**, ícones centrais **38px**, tray menor à direita
-- Menu Iniciar com ícone Windows (`mintstick-logo-windows`), **38px**, sem sidebar/avatar/favoritos
-- CSS do Nemo (`#202020` + seleção `#0078D4`)
-- Wallpaper Windows 11 dark 3840×2160
-- Tela de login opcional (`--greeter`)
+### Pelo GitHub (mais fácil)
 
-Não copia apps pessoais, senhas nem configs do Cursor/Steam.
+1. Abra https://github.com/neves-douglas/mint-win11-cinnamon
+2. Botão verde **Code** → **Download ZIP**
+3. Extraia o ZIP
+4. Abra a pasta e dê dois cliques em **Instalar.desktop**
+5. Escolha **Executar no terminal**
+6. Digite a senha do computador (não mostra asterisco, é normal)
+7. Ao terminar: **Alt+F2**, digite `r`, Enter
 
-## Requisitos
-
-Linux Mint **Cinnamon** (testado no 22.x).
-
-```bash
-sudo apt install papirus-icon-theme yaru-theme-icon
-```
-
-Se o PC tiver `/usr/share/icons/bloom` (ícones Deepin), o Chrome/Steam ficam iguais ao original. Sem bloom, o Papirus cobre o resto.
-
-## Instalação
+### Pelo terminal
 
 ```bash
 git clone https://github.com/neves-douglas/mint-win11-cinnamon.git
@@ -40,18 +25,32 @@ chmod +x install.sh
 ./install.sh
 ```
 
-Depois **Alt+F2** → `r` → Enter (ou logout).
+Na primeira vez precisa de **internet**. O script instala sozinho o pacote `deepin-icon-theme` (ícones **bloom**, ~31 MB) mais Papirus, cursor Yaru e fontes Ubuntu.
 
-Opções:
+## O que o `./install.sh` instala
+
+| Item | Como entra |
+| --- | --- |
+| Ícones **bloom** (Chrome, Steam, apps Deepin) | `sudo apt install deepin-icon-theme` (se o apt falhar, baixa o .deb) |
+| Papirus (base dos ícones) | `papirus-icon-theme` |
+| Cursor | `yaru-theme-icon` |
+| Fonte Ubuntu 10 | `fonts-ubuntu` (já vem no Mint) |
+| Tema das janelas `Win11-round-Dark` | copiado para `~/.themes` |
+| Pastas amarelas Win11, lixeira, Explorer | overlay em `~/.local/share/icons` |
+| Painel 60px, ícones 38px | gsettings |
+| Menu Iniciar (ícone Windows 38px) | config do Cinnamon + SVG incluso |
+| Sidebar do Nemo escura | `~/.config/gtk-3.0/gtk.css` |
+| Wallpaper Win11 dark | `~/Imagens/wallpapper/` |
+| Tela de login | slick-greeter (use `--no-greeter` se não quiser) |
+
+Não copia senha, Cursor nem lista pessoal de programas. A barra nasce com Nemo, Firefox, Chrome, Terminal e Configurações.
 
 ```bash
-./install.sh --douglas-pins   # mesma lista de apps fixos da barra original
-./install.sh --greeter        # tema da tela de login (sudo)
+./install.sh --douglas-pins   # mesma barra de apps da máquina original
+./install.sh --no-greeter     # não mexe na tela de login
 ```
 
-Arquivos GTK antigos viram `*.bak-mint-win11`.
-
-## Tamanhos (os que o pessoal comentou)
+## Tamanhos
 
 | Peça | Valor |
 | --- | --- |
@@ -59,17 +58,17 @@ Arquivos GTK antigos viram `*.bak-mint-win11`.
 | Ícones da lista de janelas (centro) | 38 px |
 | Ícones da bandeja (direita) | 22 px |
 | Ícone do menu Iniciar | 38 px |
-| Fonte da interface | Ubuntu 10 |
+| Fonte | Ubuntu 10 |
 | Sidebar do Nemo | 220 px |
 
-## Depois de instalar, no Cinnamon
+## Se algo não mudou
 
-1. **Temas** → Aplicativos / Desktop / Janelas = `Win11-round-Dark`
-2. **Ícones** = `bloom`
-3. **Cursor** = `Yaru` (já aplicado pelo script)
+1. Alt+F2 → `r` → Enter (ou saia da sessão)
+2. Temas: Aplicativos / Desktop / Janelas = `Win11-round-Dark`, ícones = `bloom`, cursor = `Yaru`
+3. Ícone velho na barra: tira o app e pinna de novo
 
-Se o painel ainda mostrar ícone velho, tira o app da barra e pinna de novo.
+Arquivos GTK antigos ficam como `*.bak-mint-win11`.
 
 ## Créditos
 
-Ver [ATTRIBUTIONS.md](ATTRIBUTIONS.md). Tema GTK: vinceliuice. Pastas: yeyushengfan258. O wallpaper stock é da Microsoft — podem trocar em `~/Imagens/wallpapper/` (ou `~/Pictures/wallpapper/`).
+[ATTRIBUTIONS.md](ATTRIBUTIONS.md) — vinceliuice (GTK), yeyushengfan258 (pastas), Deepin bloom, Papirus. Wallpaper stock da Microsoft; podem trocar a imagem depois.
