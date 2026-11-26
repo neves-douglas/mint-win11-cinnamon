@@ -263,14 +263,35 @@ fi
 
 update-desktop-database "$HOME_DIR/.local/share/applications" 2>/dev/null || true
 
+echo
+echo "==> recarregando o Cinnamon (equivale a Alt+F2, r, Enter)"
+if dbus-send --session --type=method_call --dest=org.Cinnamon /org/Cinnamon \
+    org.Cinnamon.Eval string:'global.reexec_self()' >/dev/null 2>&1; then
+  echo "    Cinnamon recarregado."
+else
+  echo "    não deu para recarregar sozinho — use o atalho abaixo."
+fi
+
 cat <<'EOF'
 
-Tudo instalado.
+========================================
+  PRONTO
+========================================
 
-Para aparecer agora:
-  1. Aperte Alt + F2
-  2. Digite a letra r
-  3. Aperte Enter
+O visual já foi aplicado. Se a tela não mudou:
 
-Se algum ícone da barra ficar antigo, tire o app da barra e pinne de novo.
+  1. Aperte  Alt + F2
+  2. Digite  r
+  3. Aperte  Enter
+
+Isso só atualiza o painel. Não apaga arquivo nenhum.
+
+Se um ícone da barra ficar antigo, tire o app da barra e pinne de novo.
+
+Win+L trava a tela (como no Windows).
+
 EOF
+
+if [[ -t 0 ]]; then
+  read -r -p "Aperte Enter para fechar... "
+fi

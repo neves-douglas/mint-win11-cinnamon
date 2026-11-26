@@ -14,7 +14,7 @@ Feito para quem não manja de Linux — pede a senha uma vez e resolve o resto.
 4. Abra a pasta e dê dois cliques em **Instalar.desktop**
 5. Escolha **Executar no terminal**
 6. Digite a senha do computador (não mostra asterisco, é normal)
-7. Ao terminar: **Alt+F2**, digite `r`, Enter
+7. No final o instalador tenta recarregar o Cinnamon sozinho. Se a tela não mudar: **Alt+F2**, digite `r`, Enter
 
 ### Pelo terminal
 

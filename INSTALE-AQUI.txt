@@ -7,8 +7,8 @@ Jeito mais fácil
 2. Clique duas vezes em "Instalar.desktop"
 3. Se o Mint perguntar, escolha "Executar no terminal"
 4. Digite a senha do computador (não aparece asterisco, é normal)
-5. Espere terminar
-6. Aperte Alt+F2, digite r, Enter
+5. Espere terminar (no final o próprio instalador recarrega o painel
+   e mostra: se não mudou, Alt+F2, digite r, Enter)
 
 Pelo terminal
 -------------
